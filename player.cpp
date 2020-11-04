@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void Player::Draw(Deck d) {
+void Player::Draw(Deck& d) {
     // Make sure you can draw from the deck
     if (d.cards.empty()) {
         cout << "That deck is empty!\n";
@@ -17,7 +17,7 @@ void Player::Draw(Deck d) {
     hand.push_back(d.cards.front());
 
     // Take the card out of the deck
-    d.cards.pop_back();
+    d.cards.pop_front();
 }
 
 void Player::Discard(Card c) {
@@ -44,4 +44,8 @@ void Player::printHand() {
 
 void Player::printDiscard() {
     discardPile.PrintDeck();
+}
+
+Card Player::getCard(int i) {
+    return hand[i];
 }

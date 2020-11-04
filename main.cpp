@@ -64,6 +64,19 @@ int main() {
 
       default: cout << "invalid input\n";
     }
+
+    if (input == 1 || input == 2) {
+      cout << "Hand: ";
+      p1.printHand();
+      cout << "Discard a card (enter 1-8): ";
+      cin >> input;
+
+      if (input < 9 && input > 0) {
+        p1.Discard(p1.getCard(input - 1));
+      } else {
+        cout << "invalid input.\n";
+      }
+    }
   }
 
 }

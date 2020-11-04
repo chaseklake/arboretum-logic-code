@@ -17,12 +17,13 @@ public:
 
     Player() {};
 
-    void Draw(Deck d);
+    void Draw(Deck& d);
     //void Play(position?);
     void Discard(Card c);
 
     void printHand();
     void printDiscard();
+    Card getCard(int i);
 };
 
 #endif
