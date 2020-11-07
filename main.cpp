@@ -68,10 +68,10 @@ int main() {
     if (input == 1 || input == 2) {
       cout << "Hand: ";
       p1.printHand();
-      cout << "Discard a card (enter 1-8): ";
+      cout << "Discard a card (enter 1-" << p1.getHandSize() << "): ";
       cin >> input;
 
-      if (input < 9 && input > 0) {
+      if (input <= p1.getHandSize() && input > 0) {
         p1.Discard(p1.getCard(input - 1));
       } else {
         cout << "invalid input.\n";

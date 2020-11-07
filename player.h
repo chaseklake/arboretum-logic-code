@@ -24,6 +24,7 @@ public:
     void printHand();
     void printDiscard();
     Card getCard(int i);
+    int getHandSize() { return hand.size(); }
 };
 
 #endif
