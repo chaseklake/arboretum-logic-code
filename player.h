@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 
 #include "card.h"
 #include "deck.h"
@@ -18,7 +19,7 @@ public:
     Player() {};
 
     void Draw(Deck& d);
-    //void Play(position?);
+    void Play(string);
     void Discard(Card c);
 
     void printHand();
